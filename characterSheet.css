@@ -1,0 +1,292 @@
+/* Fiche personnage crée par Maldragan  */
+/*             en Juillet 2020          */
+/*                                      */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.charsheet {
+   width: 840px;
+   position:absolute;
+
+}
+
+
+
+
+.sheet-desactive {
+  opacity: 0.5;
+  pointer-events: none;
+  text-align:center;
+} 
+
+.sheet-cacher{
+    display:none;
+}
+
+.sheet-header-fight {
+    margin-bottom: 2px;
+    padding: 1px 2px;
+
+    background: #663300;
+	color: white;
+	font-weight: bold;
+}
+
+.sheet-header {
+    margin-bottom:0px;
+    padding: 2px 4px;
+
+	background: #663300;
+	color: white;
+	font-weight: bold;
+}
+
+.sheet-section {
+	float: left;
+	width: 100%;
+
+	margin: 0;
+	padding: 1px;
+	box-sizing: border-box;
+}
+
+.sheet-half {
+	max-width: 50%;
+}
+
+.sheet-break {
+	clear: both;
+}
+
+label,
+select {
+	margin: 5px 0 0 5px;
+	font-size:14px;
+	float: left;
+    height: 25px;
+    width: 240px;
+    clear:both;
+}
+
+textarea {
+	margin: 0;
+	width: 100%;
+	min-height: 400px;
+	resize: vertical;
+	box-sizing: border-box;
+	
+}
+input[type="text"],
+input[type="number"]{
+    margin:2px 0 2px 0;
+    float: right;
+    padding:2px 0px 2px 0px;
+    width: 150px;
+    text-align:center;
+}
+
+
+.sheet-repitem,
+.repitem {
+	margin-bottom: 2px;
+}
+
+/* Override Roll20 Button styling for something less conspicious */
+button {
+	height: 22px;
+	line-height: 16px;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	background-image: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.repitem button {
+	height: 28px;
+	line-height: 20px;
+}
+
+/*Configure the tab buttons*/
+.sheet-fiche,
+.sheet-competences,
+.sheet-sorts,
+.sheet-historique,
+.sheet-symetrie,
+.sheet-config{
+	display: none!important;
+}
+.sheet-bauhaus,
+.sheet-obscur,
+.sheet-mishima,
+.sheet-imperial,
+.sheet-Confrerie,
+.sheet-Cybertronic,
+.sheet-Capitol,
+.sheet-souscomp
+{
+    display:none;
+}
+
+.sheet-chksouscomp:checked ~ div.sheet-souscomp,
+{
+	display: block;
+}
+.sheet-chkObscur:checked ~ div.sheet-obscur,
+.sheet-chkBauhaus:checked ~ div.sheet-bauhaus,
+.sheet-chkImperial:checked ~ div.sheet-imperial,
+.sheet-chkMisihima:checked ~ div.sheet-mishima,
+.sheet-chkConfrerie:checked ~ div.sheet-Confrerie,
+.sheet-chkCapitol:checked ~ div.sheet-Capitol,
+.sheet-chkCybertronic:checked ~ div.sheet-Cybertronic,
+{
+	display: block;
+}
+
+
+/* show the selected tab */
+.sheet-tabstoggle[value="fiche"] ~ div.sheet-fiche,
+.sheet-tabstoggle[value="competences"] ~ div.sheet-competences,
+.sheet-tabstoggle[value="sorts"] ~ div.sheet-sorts,
+.sheet-tabstoggle[value="historique"] ~ div.sheet-historique,
+.sheet-tabstoggle[value="symetrie"] ~ div.sheet-symetrie,
+.sheet-tabstoggle[value="config"] ~ div.sheet-config {
+	display: block!important;
+}
+
+
+/* === BASIC === */
+.sheet-logo {
+	width: 800px;
+	margin: 0 5px;
+    float: center;
+
+}
+.charsheet {
+    background-image: url("https://raw.githubusercontent.com/maldragan/Roll20-FR-MutantChronicles-V1/master/img/mcbackground.png");
+    
+}
+
+
+.sheet-section-basic tr {
+	margin-left: 0px;
+}
+
+.sheet-section-basic td {
+	padding: 0px;
+	text-align: center; /* center checkbox horizontally */
+    vertical-align: middle; /* center checkbox vertically */
+    border-top:0px none;
+    border-right:0px none;
+    border-left:0px none;
+}
+
+
+.sheet-section-basic td:first-child{
+    text-align: left;
+    padding-left:3px;
+}
+
+.sheet-section-basic input[type="number"] {
+	width: 100px;
+
+}
+
+.sheet-section-basic .sheet-column {
+	width: calc(50% - 200px);
+}
+
+/* === SKILLS === */
+.sheet-section-skills {
+	min-width: 400px;
+}
+/*
+.sheet-section-skills input {
+	width: 60px;
+}
+*/
+.sheet-section-skills {
+	text-align: left;
+	font-weight: bold;
+	padding: 0 4px;
+}
+
+.sheet-skill-on {
+	border: 1px solid black;
+}
+
+.sheet-skill-off {
+	background-color: #E3E3E3;
+	border: 1px solid gray;
+}
+
+/* === ASPECT === */
+.sheet-section-aspects input {
+	width: 100%;
+}
+
+/* === STRESS === */
+.sheet-section-stress td {
+	text-align: left;
+	padding-right: 5px;
+}
+
+.sheet-section-stress input {
+	margin-left: 2px;
+	float:none!important;
+}
+
+.sheet-check-on {
+	border: 1px solid black;
+}
+
+.sheet-check-off {
+	background-color: #E3E3E3;
+	border: 1px solid gray;
+}
+
+/* === CONSEQUENCES === */
+.sheet-section-consequences {
+	float: right;
+}
+
+.sheet-section-consequences select {
+	width: 100px;
+	float: left;
+}
+
+.sheet-section-consequences input {
+	margin-left: 2px;
+	width: calc(100% - 102px);
+}
+
+/* ****** Button****** */
+.sheet-myButton {
+	box-shadow: 3px 4px 0px 0px #1564ad!important;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:10px!important;
+	border:1px solid #337bc4!important;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:4px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	position:absolute;
+}
+.sheet-myButton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	box-shadow: 3px 4px 0px 0px #000!important;
+	background-color:#378de5;
+}
+.sheet-myButton:active {
+	position:absolute;
+	top:1px;
+}
+
