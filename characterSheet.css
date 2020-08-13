@@ -1,6 +1,6 @@
-/* Fiche personnage crée par Maldragan  */
-/*             en Juillet 2020          */
-/*                                      */
+/* Fiche personnage crée par Maldragan     */
+/*             en Juillet 2020                */
+/* modification Aout : ajout Jet de dé     */
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -13,7 +13,12 @@
 }
 
 
-
+.sheet-survol:hover{
+    color:dimgray;
+    font-weight:bold;
+    cursor:pointer;
+    text-shadow:2px 2px 0px #ffffe0;
+}
 
 .sheet-desactive {
   opacity: 0.5;
@@ -69,7 +74,11 @@ select {
     width: 240px;
     clear:both;
 }
-
+td label  {
+    margin: 5px 0 0 5px;
+    font-weight:normal;
+    font-size:13px;
+}    
 textarea {
 	margin: 0;
 	width: 100%;
