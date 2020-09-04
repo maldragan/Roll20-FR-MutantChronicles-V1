@@ -53,12 +53,12 @@
             </div>
             <div class="section  half">
                 
-                <label for="btnForce" class="survol">Force<button class="cacher"  name="roll_Init" id="btnForce" type="roll" value="&{template:default} {{name=Jet de Force}} {{Result=Force = @{Force}\n Jet : [[d20cs1cf20]]  }}"></button></label><input type="hidden" name="attr_BaseForce" value="0"/><input type="number" name="attr_Force" value="10"   title="@{Force}"/>
-                <label for="btnVital" class="survol">Vitalité<button class="cacher"  name="roll_Init" id="btnVital" type="roll" value="&{template:default} {{name=Jet de Vitalité}} {{Result=Vitalité = @{Vitalite}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseVitalite" value="0"/><input type="number" name="attr_Vitalite" value="10"   title="@{Vitalite}"/>
-                <label for="btnCoord" class="survol">Coordination<button class="cacher"  name="roll_Init" id="btnCoord" type="roll" value="&{template:default} {{name=Jet de Coordination}} {{Result=Coordination = @{Coordination}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseCoordination" value="0"/><input type="number" name="attr_Coordination" value="10"   title="@{Coordination}"/>
-                <label for="btnIntel" class="survol">Intelligence<button class="cacher"  name="roll_Init" id="btnIntel" type="roll" value="&{template:default} {{name=Jet d'Intelligence}} {{Result=Intelligenc e =@{Intelligence}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseIntelligence" value="0"/><input type="number" name="attr_Intelligence" value="10"   title="@{Intelligence}"/>
-                <label for="btnVolon" class="survol">Volonté<button class="cacher"  name="roll_Init" id="btnVolon" type="roll" value="&{template:default} {{name=Jet de Volonte}} {{Result=Volonté = @{Volonte}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseVolonte" value="0"/><input type="number" name="attr_Volonte" value="10"   title="@{Volonte}"/>
-                <label for="btnPerso" class="survol">Personnalité<button class="cacher"  name="roll_Init" id="btnPerso" type="roll" value="&{template:default} {{name=Jet de Personnalite}} {{Result=Personnalité = @{Personnalite}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BasePersonnalite" value="0"/><input type="number" name="attr_Personnalite" value="10"  title="@{Personnalite}"/>
+                <label for="btnForce" class="survol">Force<button class="cacher"  name="roll_Init" id="btnForce" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Force}} {{Result=Force = @{Force}\n Jet : [[d20cs1cf20]]  }}"></button></label><input type="hidden" name="attr_BaseForce" value="0"/><input type="number" name="attr_Force" value="10"   title="@{Force}"/>
+                <label for="btnVital" class="survol">Vitalité<button class="cacher"  name="roll_Init" id="btnVital" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Vitalité}} {{Result=Vitalité = @{Vitalite}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseVitalite" value="0"/><input type="number" name="attr_Vitalite" value="10"   title="@{Vitalite}"/>
+                <label for="btnCoord" class="survol">Coordination<button class="cacher"  name="roll_Init" id="btnCoord" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Coordination}} {{Result=Coordination = @{Coordination}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseCoordination" value="0"/><input type="number" name="attr_Coordination" value="10"   title="@{Coordination}"/>
+                <label for="btnIntel" class="survol">Intelligence<button class="cacher"  name="roll_Init" id="btnIntel" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Intelligence}} {{Result=Intelligenc e =@{Intelligence}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseIntelligence" value="0"/><input type="number" name="attr_Intelligence" value="10"   title="@{Intelligence}"/>
+                <label for="btnVolon" class="survol">Volonté<button class="cacher"  name="roll_Init" id="btnVolon" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Volonte}} {{Result=Volonté = @{Volonte}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BaseVolonte" value="0"/><input type="number" name="attr_Volonte" value="10"   title="@{Volonte}"/>
+                <label for="btnPerso" class="survol">Personnalité<button class="cacher"  name="roll_Init" id="btnPerso" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Personnalite}} {{Result=Personnalité = @{Personnalite}\n Jet : [[d20cs1cf20]]  }}"></label><input type="hidden" name="attr_BasePersonnalite" value="0"/><input type="number" name="attr_Personnalite" value="10"  title="@{Personnalite}"/>
             
                 <input type="hidden" name="attr_BaseForCoord" value="0"/>
                 <input type="hidden" name="attr_BaseIntVol" value="0"/>
@@ -82,7 +82,7 @@
                 <label>Cases par action</label><input class="desactive" type="text" name="attr_CaseAction" title="@{CaseAction}"/>
                 <label>Actions</label><input class="desactive" type="text" name="attr_Actions" title="@{Actions}"/>
                 <label>Bonus de perception</label><input class="desactive" type="text" name="attr_Perception" title="@{Perception}"/>
-                <label for="btnInit" class="survol">Initiative<button class="cacher" name="roll_Init" id="btnInit" type="roll" value="&{template:default} {{name=Jet d'Initiative}} {{Result=[[d20cs1cf20 + @{BaseCoordination} &{tracker}]] }}"></button></label><input class="desactive" type="text" name="attr_BaseCoordination"/>
+                <label for="btnInit" class="survol">Initiative<button class="cacher" name="roll_Init" id="btnInit" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Initiative}} {{Result=[[d10 + @{BaseCoordination} &{tracker}]] }}"></button></label><input class="desactive" type="text" name="attr_BaseCoordination"/>
             </div>
         </div>
         <div class="section-skills section">
@@ -338,13 +338,13 @@
     
     <div  class="competences sheet-section-basic sheet-section">
         <input type="checkbox" style="margin-left:15px;" class="chksouscomp" name="attr_Csouscomp" value='1'>&nbsp;Sous-compétence</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkObscur" name="attr_Cobscur" checked=""  value='1'/>&nbsp;Légions Obscures</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkBauhaus" name="attr_Cbauhaus" checked="" value='1'/>&nbsp;Bauhaus</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkImperial" name="attr_Cimperial" checked="" value='1'/>&nbsp;Imperial</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkMisihima" name="attr_Cmishima" checked="" value='1'/>&nbsp;Mishima</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkConfrerie" name="attr_Cconfrerie" checked="" value='1'/>&nbsp;Confrérie</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkCapitol" name="attr_Ccapitol" checked="" value='1'/>&nbsp;Capitol</input>
-        <input type="checkbox" style="margin-left:15px;" class="chkCybertronic" name="attr_Ccybtronic" checked="" value='1'/>&nbsp;Cybertronic</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkObscur" name="attr_Cobscur" value='1'/>&nbsp;Légions Obscures</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkBauhaus" name="attr_Cbauhaus" value='1'/>&nbsp;Bauhaus</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkImperial" name="attr_Cimperial" value='1'/>&nbsp;Imperial</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkMisihima" name="attr_Cmishima" value='1'/>&nbsp;Mishima</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkConfrerie" name="attr_Cconfrerie" value='1'/>&nbsp;Confrérie</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkCapitol" name="attr_Ccapitol" value='1'/>&nbsp;Capitol</input>
+        <input type="checkbox" style="margin-left:15px;" class="chkCybertronic" name="attr_Ccybtronic" value='1'/>&nbsp;Cybertronic</input>
             
         <div class="sheet-section-stress sheet-section ">
             <div class="sheet-header ">Compétences</div>
@@ -374,7 +374,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAJE" class="survol">Armes de jet<button class="cacher"  name="roll_Init" id="btnAJE" type="roll" value="&{template:default} {{name=Jet d'Armes de jet}} {{Result=Armes de jet = @{AJEValeur}\n Jet : [[d20cs1cf20]]  }}"></label></td>
+                        <td ><label for="btnAJE" class="survol">Armes de jet<button class="cacher"  name="roll_Init" id="btnAJE" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Armes de jet}} {{Result=Armes de jet = @{AJEValeur}\n Jet : [[d20cs1cf20]]  }}"></label></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AJEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_AJEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -390,7 +390,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AJE8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAME" class="survol">Armes de mêlée<button class="cacher"  name="roll_Init" id="btnAME" type="roll" value="&{template:default} {{name=Jet d'Armes de mêlée}} {{Result=Armes de mêlée = @{AMEValeur}\n Jet : [[d20cs1cf20]]  }}"></label></td>
+                        <td ><label for="btnAME" class="survol">Armes de mêlée<button class="cacher"  name="roll_Init" id="btnAME" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Armes de mêlée}} {{Result=Armes de mêlée = @{AMEValeur}\n Jet : [[d20cs1cf20]]  }}"></label></td>
             			<td>Force</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AMEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_AMEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForce" /></td>
@@ -406,7 +406,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AME8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnATR" class="survol">Armes de trait<button class="cacher"  name="roll_Init" id="btnATR" type="roll" value="&{template:default} {{name=Jet d'Armes de trait}} {{Result=Armes de trait = @{ATRValeur}\n Jet : [[d20cs1cf20]]  }}"></label></td>
+                        <td ><label for="btnATR" class="survol">Armes de trait<button class="cacher"  name="roll_Init" id="btnATR" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Armes de trait}} {{Result=Armes de trait = @{ATRValeur}\n Jet : [[d20cs1cf20]]  }}"></label></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ATRValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ATRBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -422,7 +422,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ATR8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCCP" class="survol">Corps à corps<button class="cacher"  name="roll_Init" id="btnCCP" type="roll" value="&{template:default} {{name=Jet de Corps à corps}} {{Result=Corps à corps = @{CCPValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCCP" class="survol">Corps à corps<button class="cacher"  name="roll_Init" id="btnCCP" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Corps à corps}} {{Result=Corps à corps = @{CCPValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Force</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CCPValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CCPBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForce" /></td>
@@ -438,7 +438,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CCP8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnLUT" class="survol">Lutte<button class="cacher"  name="roll_Init" id="btnLUT" type="roll" value="&{template:default} {{name=Jet de Lutte}} {{Result=Lutte = @{LUTValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnLUT" class="survol">Lutte<button class="cacher"  name="roll_Init" id="btnLUT" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Lutte}} {{Result=Lutte = @{LUTValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_LUTValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_LUTBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -454,7 +454,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LUT8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPAR" class="survol">Parade<button class="cacher"  name="roll_Init" id="btnPAR" type="roll" value="&{template:default} {{name=Jet de Parade}} {{Result=Parade = @{PARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPAR" class="survol">Parade<button class="cacher"  name="roll_Init" id="btnPAR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Parade}} {{Result=Parade = @{PARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PARValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_PARBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -484,7 +484,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnALE" class="survol">Autom. Léger<button class="cacher"  name="roll_Init" id="btnALE" type="roll" value="&{template:default} {{name=Jet d'Autom. Léger}} {{Result=Autom. Léger = @{ALEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnALE" class="survol">Autom. Léger<button class="cacher"  name="roll_Init" id="btnALE" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Autom. Léger}} {{Result=Autom. Léger = @{ALEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Force</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ALEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ALEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForce" /></td>
@@ -500,7 +500,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ALE8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnALO" class="survol">Autom. Lourd<button class="cacher"  name="roll_Init" id="btnALO" type="roll" value="&{template:default} {{name=Jet d'Autom. Lourd}} {{Result=Autom. Lourd = @{ALOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnALO" class="survol">Autom. Lourd<button class="cacher"  name="roll_Init" id="btnALO" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Autom. Lourd}} {{Result=Autom. Lourd = @{ALOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Force</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ALOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ALOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForce" /></td>
@@ -516,7 +516,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ALO8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnFUS" class="survol">Fusils<button class="cacher"  name="roll_Init" id="btnFUS" type="roll" value="&{template:default} {{name=Jet de Fusils}} {{Result=Fusils = @{FUSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnFUS" class="survol">Fusils<button class="cacher"  name="roll_Init" id="btnFUS" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Fusils}} {{Result=Fusils = @{FUSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_FUSValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_FUSBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -532,7 +532,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FUS8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnLGR" class="survol">Lance grenades<button class="cacher"  name="roll_Init" id="btnLGR" type="roll" value="&{template:default} {{name=Jet de Lance grenades}} {{Result=Lance grenades = @{LGRValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnLGR" class="survol">Lance grenades<button class="cacher"  name="roll_Init" id="btnLGR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Lance grenades}} {{Result=Lance grenades = @{LGRValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_LGRValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_LGRBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -548,7 +548,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LGR8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnLME" class="survol">Lance missille d'épaule<button class="cacher"  name="roll_Init" id="btnLME" type="roll" value="&{template:default} {{name=Jet de Lance missille d'épaule}} {{Result=Lance missille d'épaule = @{LMEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnLME" class="survol">Lance missille d'épaule<button class="cacher"  name="roll_Init" id="btnLME" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Lance missille d'épaule}} {{Result=Lance missille d'épaule = @{LMEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_LMEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_LMEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -564,7 +564,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LME8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPIS" class="survol">Pistolets<button class="cacher"  name="roll_Init" id="btnPIS" type="roll" value="&{template:default} {{name=Jet de Pistolets}} {{Result=Pistolets = @{PISValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPIS" class="survol">Pistolets<button class="cacher"  name="roll_Init" id="btnPIS" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Pistolets}} {{Result=Pistolets = @{PISValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PISValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_PISBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -591,7 +591,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnADM" class="survol">Administration<button class="cacher"  name="roll_Init" id="btnADM" type="roll" value="&{template:default} {{name=Jet d'Administration}} {{Result=Administration = @{ADMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnADM" class="survol">Administration<button class="cacher"  name="roll_Init" id="btnADM" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Administration}} {{Result=Administration = @{ADMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ADMValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ADMBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -607,7 +607,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ADM8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAST" class="survol">Astuce<button class="cacher"  name="roll_Init" id="btnAST" type="roll" value="&{template:default} {{name=Jet d'Astuce}} {{Result=Astuce = @{ASTValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnAST" class="survol">Astuce<button class="cacher"  name="roll_Init" id="btnAST" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Astuce}} {{Result=Astuce = @{ASTValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ASTValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ASTBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -623,7 +623,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AST8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEDU" class="survol">Education<button class="cacher"  name="roll_Init" id="btnEDU" type="roll" value="&{template:default} {{name=Jet d'Education}} {{Result=Education = @{EDUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEDU" class="survol">Education<button class="cacher"  name="roll_Init" id="btnEDU" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Education}} {{Result=Education = @{EDUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EDUValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_EDUBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -639,7 +639,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EDU8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnELO" class="survol">Eloquence<button class="cacher"  name="roll_Init" id="btnELO" type="roll" value="&{template:default} {{name=Jet d'Eloquence}} {{Result=Eloquence = @{ELOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnELO" class="survol">Eloquence<button class="cacher"  name="roll_Init" id="btnELO" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Eloquence}} {{Result=Eloquence = @{ELOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ELOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ELOBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -655,7 +655,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ELO8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnINT" class="survol">Interrogation<button class="cacher"  name="roll_Init" id="btnINT" type="roll" value="&{template:default} {{name=Jet d'Interrogation}} {{Result=Interrogation = @{INTValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnINT" class="survol">Interrogation<button class="cacher"  name="roll_Init" id="btnINT" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Interrogation}} {{Result=Interrogation = @{INTValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_INTValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_INTBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -671,7 +671,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INT8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnNEG" class="survol">Négociation<button class="cacher"  name="roll_Init" id="btnNEG" type="roll" value="&{template:default} {{name=Jet de Négociation}} {{Result=Négociation = @{NEGValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnNEG" class="survol">Négociation<button class="cacher"  name="roll_Init" id="btnNEG" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Négociation}} {{Result=Négociation = @{NEGValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_NEGValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_NEGBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -687,7 +687,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_NEG8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnJEU" class="survol">Jeu<button class="cacher"  name="roll_Init" id="btnJEU" type="roll" value="&{template:default} {{name=Jet de Jeu}} {{Result=Jeu = @{JEUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnJEU" class="survol">Jeu<button class="cacher"  name="roll_Init" id="btnJEU" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Jeu}} {{Result=Jeu = @{JEUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(Int+Vol)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_JEUValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_JEUBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntVol" /></td>
@@ -704,7 +704,7 @@
                     </tr>
                    
                     <tr>
-                        <td ><label for="btnJOU" class="survol">Journalisme<button class="cacher"  name="roll_Init" id="btnJOU" type="roll" value="&{template:default} {{name=Jet de Journalisme}} {{Result=Journalisme = @{JOUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnJOU" class="survol">Journalisme<button class="cacher"  name="roll_Init" id="btnJOU" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Journalisme}} {{Result=Journalisme = @{JOUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_JOUValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_JOUBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -732,7 +732,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAGI" class="survol">Agilité<button class="cacher"  name="roll_Init" id="btnAGI" type="roll" value="&{template:default} {{name=Jet d'Agilité}} {{Result=Agilité = @{AGIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnAGI" class="survol">Agilité<button class="cacher"  name="roll_Init" id="btnAGI" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Agilité}} {{Result=Agilité = @{AGIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AGIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_AGIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -748,7 +748,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AGI8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDEX" class="survol">Dextérité<button class="cacher"  name="roll_Init" id="btnDEX" type="roll" value="&{template:default} {{name=Jet de Dextérité}} {{Result=Dextérité = @{DEXValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDEX" class="survol">Dextérité<button class="cacher"  name="roll_Init" id="btnDEX" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Dextérité}} {{Result=Dextérité = @{DEXValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DEXValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_DEXBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -764,7 +764,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEX8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDIS" class="survol">Discrétion<button class="cacher"  name="roll_Init" id="btnDIS" type="roll" value="&{template:default} {{name=Jet de Discrétion}} {{Result=Discrétion = @{DISValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDIS" class="survol">Discrétion<button class="cacher"  name="roll_Init" id="btnDIS" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Discrétion}} {{Result=Discrétion = @{DISValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DISValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_DISBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -780,7 +780,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DIS8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnESC" class="survol">Escalade<button class="cacher"  name="roll_Init" id="btnESC" type="roll" value="&{template:default} {{name=Jet d'Escalade}} {{Result=Escalade = @{ESCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnESC" class="survol">Escalade<button class="cacher"  name="roll_Init" id="btnESC" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Escalade}} {{Result=Escalade = @{ESCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Force</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ESCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ESCBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForce" /></td>
@@ -796,7 +796,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ESC8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnVAE" class="survol">Véhicule aériens<button class="cacher"  name="roll_Init" id="btnVAE" type="roll" value="&{template:default} {{name=Jet de Véhicule aériens}} {{Result=Véhicule aériens = @{VAEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnVAE" class="survol">Véhicule aériens<button class="cacher"  name="roll_Init" id="btnVAE" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Véhicule aériens}} {{Result=Véhicule aériens = @{VAEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Vol.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_VAEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_VAEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseVolonte" /></td>
@@ -812,7 +812,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VAE8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnVTE" class="survol">Véhicule terrestre<button class="cacher"  name="roll_Init" id="btnVTE" type="roll" value="&{template:default} {{name=Jet de Véhicule terrestre}} {{Result=Véhicule terrestre = @{VTEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnVTE" class="survol">Véhicule terrestre<button class="cacher"  name="roll_Init" id="btnVTE" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Véhicule terrestre}} {{Result=Véhicule terrestre = @{VTEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_VTEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_VTEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -828,7 +828,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VTE8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCHA" class="survol">Chasse<button class="cacher"  name="roll_Init" id="btnCHA" type="roll" value="&{template:default} {{name=Jet de Chasse}} {{Result=Chasse = @{CHAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCHA" class="survol">Chasse<button class="cacher"  name="roll_Init" id="btnCHA" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Chasse}} {{Result=Chasse = @{CHAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(Int+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CHAValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CHABase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntCoord" /></td>
@@ -857,7 +857,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCHI" class="survol">Chimie<button class="cacher"  name="roll_Init" id="btnCHI" type="roll" value="&{template:default} {{name=Jet de Chimie}} {{Result=Chimie = @{CHIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCHI" class="survol">Chimie<button class="cacher"  name="roll_Init" id="btnCHI" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Chimie}} {{Result=Chimie = @{CHIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CHIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CHIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -873,7 +873,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CHI8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnELE" class="survol">Electronique<button class="cacher"  name="roll_Init" id="btnELE" type="roll" value="&{template:default} {{name=Jet d'Electronique}} {{Result=Electronique = @{ELEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnELE" class="survol">Electronique<button class="cacher"  name="roll_Init" id="btnELE" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Electronique}} {{Result=Electronique = @{ELEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ELEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ELEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -889,7 +889,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ELE8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnINF" class="survol">Informatique<button class="cacher"  name="roll_Init" id="btnINF" type="roll" value="&{template:default} {{name=Jet d'Informatique}} {{Result=Informatique = @{INFValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnINF" class="survol">Informatique<button class="cacher"  name="roll_Init" id="btnINF" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Informatique}} {{Result=Informatique = @{INFValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_INFValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_INFBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -905,7 +905,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INF8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnMEC" class="survol">Mécanique<button class="cacher"  name="roll_Init" id="btnMEC" type="roll" value="&{template:default} {{name=Jet de Mécanique}} {{Result=Mécanique = @{MECValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMEC" class="survol">Mécanique<button class="cacher"  name="roll_Init" id="btnMEC" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Mécanique}} {{Result=Mécanique = @{MECValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MECValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MECBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -921,7 +921,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEC8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnMED" class="survol">Médecine<button class="cacher"  name="roll_Init" id="btnMED" type="roll" value="&{template:default} {{name=Jet de Médecine}} {{Result=Médecine = @{MEDValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMED" class="survol">Médecine<button class="cacher"  name="roll_Init" id="btnMED" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Médecine}} {{Result=Médecine = @{MEDValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MEDValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MEDBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -937,7 +937,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MED8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnSAR" class="survol">Système d'armement<button class="cacher"  name="roll_Init" id="btnSAR" type="roll" value="&{template:default} {{name=Jet de Système d'armement}} {{Result=Système d'armement = @{SARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSAR" class="survol">Système d'armement<button class="cacher"  name="roll_Init" id="btnSAR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Système d'armement}} {{Result=Système d'armement = @{SARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SARValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_SARBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -953,7 +953,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SAR8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnVSP" class="survol">Vaisseaux spaciaux<button class="cacher"  name="roll_Init" id="btnVSP" type="roll" value="&{template:default} {{name=Jet de Vaisseaux spaciaux}} {{Result=Vaisseaux spaciaux = @{VSPValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnVSP" class="survol">Vaisseaux spaciaux<button class="cacher"  name="roll_Init" id="btnVSP" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Vaisseaux spaciaux}} {{Result=Vaisseaux spaciaux = @{VSPValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_VSPValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_VSPBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -970,7 +970,7 @@
                     </tr>
                     
                     <tr>
-                        <td ><label for="btnSUR" class="survol">Surveillance<button class="cacher"  name="roll_Init" id="btnSUR" type="roll" value="&{template:default} {{name=Jet de Surveillance}} {{Result=Surveillance = @{SURValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSUR" class="survol">Surveillance<button class="cacher"  name="roll_Init" id="btnSUR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Surveillance}} {{Result=Surveillance = @{SURValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SURValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_SURBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -986,7 +986,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUR8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnSSE" class="survol">Systèmes de sécurité<button class="cacher"  name="roll_Init" id="btnSSE" type="roll" value="&{template:default} {{name=Jet de Systèmes de sécurité}} {{Result=Systèmes de sécurité = @{SSEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSSE" class="survol">Systèmes de sécurité<button class="cacher"  name="roll_Init" id="btnSSE" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Systèmes de sécurité}} {{Result=Systèmes de sécurité = @{SSEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SSEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_SSEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1002,7 +1002,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SSE8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnSUV" class="survol">Survie<button class="cacher"  name="roll_Init" id="btnSUV" type="roll" value="&{template:default} {{name=Jet de Survie}} {{Result=Survie = @{SUVValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSUV" class="survol">Survie<button class="cacher"  name="roll_Init" id="btnSUV" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Survie}} {{Result=Survie = @{SUVValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SUVValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_SUVBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1018,7 +1018,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUV8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnINU" class="survol">Instrument<button class="cacher"  name="roll_Init" id="btnINU" type="roll" value="&{template:default} {{name=Jet d'Instrument}} {{Result=Instrument = @{INUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnINU" class="survol">Instrument<button class="cacher"  name="roll_Init" id="btnINU" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Instrument}} {{Result=Instrument = @{INUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_INUValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_INUBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1035,7 +1035,7 @@
                     </tr>
                     
                     <tr>
-                        <td ><label for="btnCME" class="survol">Connaissance Mégacorporation<button class="cacher"  name="roll_Init" id="btnCME" type="roll" value="&{template:default} {{name=Jet de Connaissance Mégacorporation}} {{Result=Connaissance Mégacorporation = @{CMEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCME" class="survol">Connaissance Mégacorporation<button class="cacher"  name="roll_Init" id="btnCME" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Connaissance Mégacorporation}} {{Result=Connaissance Mégacorporation = @{CMEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CMEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CMEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1052,7 +1052,7 @@
                     </tr>
                     
                     <tr>
-                        <td ><label for="btnATO" class="survol">Astronavigation<button class="cacher"  name="roll_Init" id="btnATO" type="roll" value="&{template:default} {{name=Jet d'Astronavigation}} {{Result=Astronavigation = @{ATOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnATO" class="survol">Astronavigation<button class="cacher"  name="roll_Init" id="btnATO" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Astronavigation}} {{Result=Astronavigation = @{ATOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ATOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ATOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1082,7 +1082,7 @@
                         <td>+8</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnESQ" class="survol">Esquive<button class="cacher"  name="roll_Init" id="btnESQ" type="roll" value="&{template:default} {{name=Jet d'Esquive}} {{Result=Esquive = @{ESQValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnESQ" class="survol">Esquive<button class="cacher"  name="roll_Init" id="btnESQ" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Esquive}} {{Result=Esquive = @{ESQValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Bo. Def.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ESQValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ESQBase" /><input class="desactive" style=width:50px type="text" name="attr_BonusDefensif" /></td>
@@ -1098,7 +1098,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ESQ8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPER" class="survol">Perception<button class="cacher"  name="roll_Init" id="btnPER" type="roll" value="&{template:default} {{name=Jet de Perception}} {{Result=Perception = @{PERValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPER" class="survol">Perception<button class="cacher"  name="roll_Init" id="btnPER" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Perception}} {{Result=Perception = @{PERValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Bo. Per.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PERValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_PERBase" /><input class="desactive" style=width:50px type="text" name="attr_Perception" /></td>
@@ -1150,7 +1150,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnASA" class="survol">Combat sans arme<button class="cacher"  name="roll_Init" id="btnASA" type="roll" value="&{template:default} {{name=Jet de Combat sans arme}} {{Result=Combat sans arme = @{ASAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnASA" class="survol">Combat sans arme<button class="cacher"  name="roll_Init" id="btnASA" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Combat sans arme}} {{Result=Combat sans arme = @{ASAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Force</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ASAValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ASABase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForce" /></td>
@@ -1166,7 +1166,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ASA8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnMSI" class="survol">meurtre silencieux<button class="cacher"  name="roll_Init" id="btnMSI" type="roll" value="&{template:default} {{name=Jet de meurtre silencieux}} {{Result=meurtre silencieux = @{MSIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMSI" class="survol">meurtre silencieux<button class="cacher"  name="roll_Init" id="btnMSI" type="roll" value="&{template:default} {{name=@{Nom} : Jet de meurtre silencieux}} {{Result=meurtre silencieux = @{MSIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MSIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MSIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1193,7 +1193,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnPEC" class="survol">Pêcher<button class="cacher"  name="roll_Init" id="btnPEC" type="roll" value="&{template:default} {{name=Jet de Pêcher}} {{Result=Pêcher = @{PECValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPEC" class="survol">Pêcher<button class="cacher"  name="roll_Init" id="btnPEC" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Pêcher}} {{Result=Pêcher = @{PECValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PECValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_PECBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1220,7 +1220,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnECO" class="survol">Etiquette Corporation<button class="cacher"  name="roll_Init" id="btnECO" type="roll" value="&{template:default} {{name=Jet d'Etiquette Corporation}} {{Result=Etiquette Corporation = @{ECOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnECO" class="survol">Etiquette Corporation<button class="cacher"  name="roll_Init" id="btnECO" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Etiquette Corporation}} {{Result=Etiquette Corporation = @{ECOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ECOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ECOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1236,7 +1236,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECO8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnSUJ" class="survol">Survie en Jungle<button class="cacher"  name="roll_Init" id="btnSUJ" type="roll" value="&{template:default} {{name=Jet de Survie en Jungle}} {{Result=Survie en Jungle = @{SUJValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSUJ" class="survol">Survie en Jungle<button class="cacher"  name="roll_Init" id="btnSUJ" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Survie en Jungle}} {{Result=Survie en Jungle = @{SUJValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SUJValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_SUJBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1282,7 +1282,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnEDH" class="survol">Escrime des Highlanders<button class="cacher"  name="roll_Init" id="btnEDH" type="roll" value="&{template:default} {{name=Jet d'Escrime des Highlanders}} {{Result=Escrime des Highlanders = @{EDHValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEDH" class="survol">Escrime des Highlanders<button class="cacher"  name="roll_Init" id="btnEDH" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Escrime des Highlanders}} {{Result=Escrime des Highlanders = @{EDHValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(For+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EDHValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_EDHBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForCoord" /></td>
@@ -1298,7 +1298,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EDH8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnTLB" class="survol">Techniques de combat Loups Bleus<button class="cacher"  name="roll_Init" id="btnTLB" type="roll" value="&{template:default} {{name=Jet de Techniques de combat Loups Bleus}} {{Result=Techniques de combat Loups Bleus = @{TLBValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTLB" class="survol">Techniques de combat Loups Bleus<button class="cacher"  name="roll_Init" id="btnTLB" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Techniques de combat Loups Bleus}} {{Result=Techniques de combat Loups Bleus = @{TLBValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(For+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TLBValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_TLBBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForCoord" /></td>
@@ -1325,7 +1325,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnTMI" class="survol">Tactique Militaire<button class="cacher"  name="roll_Init" id="btnTMI" type="roll" value="&{template:default} {{name=Jet de Tactique Militaire}} {{Result=Tactique Militaire = @{TMIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTMI" class="survol">Tactique Militaire<button class="cacher"  name="roll_Init" id="btnTMI" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Tactique Militaire}} {{Result=Tactique Militaire = @{TMIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TMIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_TMIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1352,7 +1352,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnCHS" class="survol">Chasse<button class="cacher"  name="roll_Init" id="btnCHS" type="roll" value="&{template:default} {{name=Jet de Chasse}} {{Result=Chasse = @{CHSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCHS" class="survol">Chasse<button class="cacher"  name="roll_Init" id="btnCHS" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Chasse}} {{Result=Chasse = @{CHSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(Int+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CHSValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CHSBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntCoord" /></td>
@@ -1379,7 +1379,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnCIM" class="survol">Connaissance d'Imperial<button class="cacher"  name="roll_Init" id="btnCIM" type="roll" value="&{template:default} {{name=Jet de Connaissance d'Imperial}} {{Result=Connaissance d'Imperial = @{CIMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCIM" class="survol">Connaissance d'Imperial<button class="cacher"  name="roll_Init" id="btnCIM" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Connaissance d'Imperial}} {{Result=Connaissance d'Imperial = @{CIMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CIMValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CIMBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1426,7 +1426,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnCYB" class="survol">Cybernétique<button class="cacher"  name="roll_Init" id="btnCYB" type="roll" value="&{template:default} {{name=Jet de Cybernétique}} {{Result=Cybernétique = @{CYBValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCYB" class="survol">Cybernétique<button class="cacher"  name="roll_Init" id="btnCYB" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Cybernétique}} {{Result=Cybernétique = @{CYBValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CYBValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CYBBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1442,7 +1442,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CYB8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnSRE" class="survol">Sub-Réalité<button class="cacher"  name="roll_Init" id="btnSRE" type="roll" value="&{template:default} {{name=Jet de Sub-Réalité}} {{Result=Sub-Réalité = @{SREValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSRE" class="survol">Sub-Réalité<button class="cacher"  name="roll_Init" id="btnSRE" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Sub-Réalité}} {{Result=Sub-Réalité = @{SREValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SREValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_SREBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1488,7 +1488,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAMC" class="survol">Arts martiaux Confrérie<button class="cacher"  name="roll_Init" id="btnAMC" type="roll" value="&{template:default} {{name=Jet de Arts martiaux Confrérie}} {{Result=Arts martiaux Confrérie = @{AMCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnAMC" class="survol">Arts martiaux Confrérie<button class="cacher"  name="roll_Init" id="btnAMC" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Arts martiaux Confrérie}} {{Result=Arts martiaux Confrérie = @{AMCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(For+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AMCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_AMCBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForCoord" /></td>
@@ -1504,7 +1504,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AMC8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnMOR" class="survol">Mortification<button class="cacher"  name="roll_Init" id="btnMOR" type="roll" value="&{template:default} {{name=Jet de Mortification}} {{Result=Mortification = @{MORValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMOR" class="survol">Mortification<button class="cacher"  name="roll_Init" id="btnMOR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Mortification}} {{Result=Mortification = @{MORValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Vol.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MORValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MORBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseVolonte" /></td>
@@ -1533,7 +1533,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCCO" class="survol">Connaissance Confrérie<button class="cacher"  name="roll_Init" id="btnCCO" type="roll" value="&{template:default} {{name=Jet de Connaissance Confrérie}} {{Result=Connaissance Confrérie = @{CCOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCCO" class="survol">Connaissance Confrérie<button class="cacher"  name="roll_Init" id="btnCCO" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Connaissance Confrérie}} {{Result=Connaissance Confrérie = @{CCOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CCOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CCOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1549,7 +1549,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CCO8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnCLO" class="survol">Connaissance Légions Obscures<button class="cacher"  name="roll_Init" id="btnCLO" type="roll" value="&{template:default} {{name=Jet de Connaissance Légions Obscures}} {{Result=Connaissance Légions Obscures = @{CLOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCLO" class="survol">Connaissance Légions Obscures<button class="cacher"  name="roll_Init" id="btnCLO" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Connaissance Légions Obscures}} {{Result=Connaissance Légions Obscures = @{CLOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CLOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CLOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1595,7 +1595,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnLOI" class="survol">Loi<button class="cacher"  name="roll_Init" id="btnLOI" type="roll" value="&{template:default} {{name=Jet de Loi}} {{Result=Loi = @{LOIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnLOI" class="survol">Loi<button class="cacher"  name="roll_Init" id="btnLOI" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Loi}} {{Result=Loi = @{LOIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_LOIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_LOIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1623,7 +1623,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnTMI2" class="survol">Tactique Militaire<button class="cacher"  name="roll_Init" id="btnTMI2" type="roll" value="&{template:default} {{name=Jet de Tactique Militaire}} {{Result=Tactique Militaire = @{TMIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTMI2" class="survol">Tactique Militaire<button class="cacher"  name="roll_Init" id="btnTMI2" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Tactique Militaire}} {{Result=Tactique Militaire = @{TMIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TMIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_TMIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1650,7 +1650,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPEH" class="survol">Pêche<button class="cacher"  name="roll_Init" id="btnPEH" type="roll" value="&{template:default} {{name=Jet de Pêche}} {{Result=Pêche = @{PEHValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPEH" class="survol">Pêche<button class="cacher"  name="roll_Init" id="btnPEH" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Pêche}} {{Result=Pêche = @{PEHValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PEHValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_PEHBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1666,7 +1666,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PEH8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPSM" class="survol">Plongée Sous-Marine<button class="cacher"  name="roll_Init" id="btnPSM" type="roll" value="&{template:default} {{name=Jet de Plongée Sous-Marine}} {{Result=Plongée Sous-Marine = @{PSMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPSM" class="survol">Plongée Sous-Marine<button class="cacher"  name="roll_Init" id="btnPSM" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Plongée Sous-Marine}} {{Result=Plongée Sous-Marine = @{PSMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PSMValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_PSMBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1682,7 +1682,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PSM8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnRPA" class="survol">Rocket Pack<button class="cacher"  name="roll_Init" id="btnRPA" type="roll" value="&{template:default} {{name=Jet de ParRocket Packade}} {{Result=Rocket Pack = @{RPAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnRPA" class="survol">Rocket Pack<button class="cacher"  name="roll_Init" id="btnRPA" type="roll" value="&{template:default} {{name=@{Nom} : Jet de ParRocket Packade}} {{Result=Rocket Pack = @{RPAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_RPAValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_RPABase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1709,7 +1709,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDEM" class="survol">Démolition<button class="cacher"  name="roll_Init" id="btnDEM" type="roll" value="&{template:default} {{name=Jet de Démolition}} {{Result=Démolition = @{DEMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDEM" class="survol">Démolition<button class="cacher"  name="roll_Init" id="btnDEM" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Démolition}} {{Result=Démolition = @{DEMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DEMValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_DEMBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1755,7 +1755,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnIAJ" class="survol">Iajitsu<button class="cacher"  name="roll_Init" id="btnIAJ" type="roll" value="&{template:default} {{name=Jet d'Iajitsu}} {{Result=Iajitsu = @{IAJValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnIAJ" class="survol">Iajitsu<button class="cacher"  name="roll_Init" id="btnIAJ" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Iajitsu}} {{Result=Iajitsu = @{IAJValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_IAJValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_IAJBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1771,7 +1771,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_IAJ8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnKEN" class="survol">Kenjitsu<button class="cacher"  name="roll_Init" id="btnKEN" type="roll" value="&{template:default} {{name=Jet de Kenjitsu}} {{Result=Kenjitsu = @{KENValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnKEN" class="survol">Kenjitsu<button class="cacher"  name="roll_Init" id="btnKEN" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Kenjitsu}} {{Result=Kenjitsu = @{KENValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(For+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_KENValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_KENBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForCoord" /></td>
@@ -1787,7 +1787,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_KEN8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnMCC" class="survol">Mishima Close Combat<button class="cacher"  name="roll_Init" id="btnMCC" type="roll" value="&{template:default} {{name=Jet de Mishima Close Combat}} {{Result=Mishima Close Combat = @{MCCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMCC" class="survol">Mishima Close Combat<button class="cacher"  name="roll_Init" id="btnMCC" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Mishima Close Combat}} {{Result=Mishima Close Combat = @{MCCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(For+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MCCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MCCBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForCoord" /></td>
@@ -1815,7 +1815,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnMEK" class="survol">Meka<button class="cacher"  name="roll_Init" id="btnMEK" type="roll" value="&{template:default} {{name=Jet de Meka}} {{Result=Meka = @{MEKValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMEK" class="survol">Meka<button class="cacher"  name="roll_Init" id="btnMEK" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Meka}} {{Result=Meka = @{MEKValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MEKValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MEKBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1842,7 +1842,7 @@
                         <td>+8</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnKI" class="survol">Ki<button class="cacher"  name="roll_Init" id="btnKI" type="roll" value="&{template:default} {{name=Jet de Ki}} {{Result=Ki = @{KIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnKI" class="survol">Ki<button class="cacher"  name="roll_Init" id="btnKI" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Ki}} {{Result=Ki = @{KIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Vol.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_KIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_KIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseVolonte" /></td>
@@ -1888,7 +1888,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAMA" class="survol">Arts Martiaux<button class="cacher"  name="roll_Init" id="btnAMA" type="roll" value="&{template:default} {{name=Jet d'Arts Martiaux}} {{Result=Arts Martiaux = @{AMAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnAMA" class="survol">Arts Martiaux<button class="cacher"  name="roll_Init" id="btnAMA" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Arts Martiaux}} {{Result=Arts Martiaux = @{AMAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(For+Coord)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AMAValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_AMABase" /><input class="desactive" style=width:50px type="text" name="attr_BaseForCoord" /></td>
@@ -1904,7 +1904,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AMA8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnASS2" class="survol">Assassinat<button class="cacher"  name="roll_Init" id="btnASS2" type="roll" value="&{template:default} {{name=Jet d'Assassinat}} {{Result=Assassinat = @{ASSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnASS2" class="survol">Assassinat<button class="cacher"  name="roll_Init" id="btnASS2" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Assassinat}} {{Result=Assassinat = @{ASSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ASSValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ASSBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -1931,7 +1931,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnEXC" class="survol">Excrucifiction<button class="cacher"  name="roll_Init" id="btnEXC" type="roll" value="&{template:default} {{name=Jet d'Excrucifiction}} {{Result=Excrucifiction = @{EXCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXC" class="survol">Excrucifiction<button class="cacher"  name="roll_Init" id="btnEXC" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Excrucifiction}} {{Result=Excrucifiction = @{EXCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_EXCBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1958,7 +1958,7 @@
                         <td>+12</td>
                     </tr>
                     <tr >
-                        <td ><label for="btnTNO" class="survol">Technologie Noire<button class="cacher"  name="roll_Init" id="btnTNO" type="roll" value="&{template:default} {{name=Jet de Technologie Noire}} {{Result=Technologie Noire = @{TNOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTNO" class="survol">Technologie Noire<button class="cacher"  name="roll_Init" id="btnTNO" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Technologie Noire}} {{Result=Technologie Noire = @{TNOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TNOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_TNOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1974,7 +1974,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TNO8" value="1" /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnNTE" class="survol">Necro-Technologie<button class="cacher"  name="roll_Init" id="btnNTE" type="roll" value="&{template:default} {{name=Jet de Necro-Technologie}} {{Result=Necro-Technologie = @{NTEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnNTE" class="survol">Necro-Technologie<button class="cacher"  name="roll_Init" id="btnNTE" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Necro-Technologie}} {{Result=Necro-Technologie = @{NTEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_NTEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_NTEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -1990,7 +1990,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_NTE8" value="1"  /></td>
                     </tr>
                     <tr >
-                        <td ><label for="btnBTE" class="survol">Bio-Technologie<button class="cacher"  name="roll_Init" id="btnBTE" type="roll" value="&{template:default} {{name=Jet de Bio-Technologie}} {{Result=Bio-Technologie = @{BTEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnBTE" class="survol">Bio-Technologie<button class="cacher"  name="roll_Init" id="btnBTE" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Bio-Technologie}} {{Result=Bio-Technologie = @{BTEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BTEValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_BTEBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2035,7 +2035,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnGES" class="survol">Gestion<button class="cacher"  name="roll_Init" id="btnGES" type="roll" value="&{template:default} {{name=Jet de Gestion}} {{Result=Gestion = @{GESValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnGES" class="survol">Gestion<button class="cacher"  name="roll_Init" id="btnGES" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Gestion}} {{Result=Gestion = @{GESValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_GESValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_GESBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2051,7 +2051,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_GES8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDRO" class="survol">Droit<button class="cacher"  name="roll_Init" id="btnDRO" type="roll" value="&{template:default} {{name=Jet de Droit}} {{Result=Droit = @{DROValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDRO" class="survol">Droit<button class="cacher"  name="roll_Init" id="btnDRO" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Droit}} {{Result=Droit = @{DROValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DROValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_DROBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2067,7 +2067,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DRO8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCOM" class="survol">Comptabilité<button class="cacher"  name="roll_Init" id="btnCOM" type="roll" value="&{template:default} {{name=Jet de Comptabilité}} {{Result=Comptabilité = @{COMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCOM" class="survol">Comptabilité<button class="cacher"  name="roll_Init" id="btnCOM" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Comptabilité}} {{Result=Comptabilité = @{COMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_COMValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_COMBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2094,7 +2094,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCRR" class="survol">Corruption<button class="cacher"  name="roll_Init" id="btnCRR" type="roll" value="&{template:default} {{name=Jet de Corruption}} {{Result=Corruption = @{CRRValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCRR" class="survol">Corruption<button class="cacher"  name="roll_Init" id="btnCRR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Corruption}} {{Result=Corruption = @{CRRValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CRRValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CRRBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -2110,7 +2110,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CRR8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEPL" class="survol">Economie planétaire<button class="cacher"  name="roll_Init" id="btnEPL" type="roll" value="&{template:default} {{name=Jet de Economie planétaire}} {{Result=Economie planétaire = @{EPLValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEPL" class="survol">Economie planétaire<button class="cacher"  name="roll_Init" id="btnEPL" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Economie planétaire}} {{Result=Economie planétaire = @{EPLValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EPLValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_EPLBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2126,7 +2126,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EPL8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnFIN" class="survol">Finance<button class="cacher"  name="roll_Init" id="btnFIN" type="roll" value="&{template:default} {{name=Jet de Finance}} {{Result=Finance = @{FINValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnFIN" class="survol">Finance<button class="cacher"  name="roll_Init" id="btnFIN" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Finance}} {{Result=Finance = @{FINValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_FINValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_FINBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2142,7 +2142,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FIN8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnMAR" class="survol">Marchandage<button class="cacher"  name="roll_Init" id="btnMAR" type="roll" value="&{template:default} {{name=Jet de Marchandage}} {{Result=Marchandage = @{MARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMAR" class="survol">Marchandage<button class="cacher"  name="roll_Init" id="btnMAR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Marchandage}} {{Result=Marchandage = @{MARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MARValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MARBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -2158,7 +2158,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MAR8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnMAK" class="survol">Marketing<button class="cacher"  name="roll_Init" id="btnMAK" type="roll" value="&{template:default} {{name=Jet de Marketing}} {{Result=Marketing = @{MAKValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMAK" class="survol">Marketing<button class="cacher"  name="roll_Init" id="btnMAK" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Marketing}} {{Result=Marketing = @{MAKValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MAKValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MAKBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2174,7 +2174,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MAK8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnMDC" class="survol">Mendicité<button class="cacher"  name="roll_Init" id="btnMDC" type="roll" value="&{template:default} {{name=Jet de Mendicité}} {{Result=Mendicité = @{MDCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMDC" class="survol">Mendicité<button class="cacher"  name="roll_Init" id="btnMDC" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Mendicité}} {{Result=Mendicité = @{MDCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MDCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_MDCBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -2201,7 +2201,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnBMA" class="survol">Bonnes Manières<button class="cacher"  name="roll_Init" id="btnBMA" type="roll" value="&{template:default} {{name=Jet de Bonnes Manières}} {{Result=Bonnes Manières = @{BMAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnBMA" class="survol">Bonnes Manières<button class="cacher"  name="roll_Init" id="btnBMA" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Bonnes Manières}} {{Result=Bonnes Manières = @{BMAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BMAValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_BMABase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -2217,7 +2217,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BMA8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCMO" class="survol">Connaissance Mode<button class="cacher"  name="roll_Init" id="btnCMO" type="roll" value="&{template:default} {{name=Jet de Connaissance Mode}} {{Result=Connaissance Mode = @{CMOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCMO" class="survol">Connaissance Mode<button class="cacher"  name="roll_Init" id="btnCMO" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Connaissance Mode}} {{Result=Connaissance Mode = @{CMOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CMOValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CMOBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2233,7 +2233,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CMO8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCML" class="survol">Connaissance du Milieu<button class="cacher"  name="roll_Init" id="btnCML" type="roll" value="&{template:default} {{name=Jet de Connaissance du Milieu}} {{Result=Connaissance du Milieu = @{CMLValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCML" class="survol">Connaissance du Milieu<button class="cacher"  name="roll_Init" id="btnCML" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Connaissance du Milieu}} {{Result=Connaissance du Milieu = @{CMLValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_CMLValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_CMLBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -2249,7 +2249,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_CML8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnETC" class="survol">Etiquette (corporation)<button class="cacher"  name="roll_Init" id="btnETC" type="roll" value="&{template:default} {{name=Jet d'Etiquette (corporation)}} {{Result=Etiquette (corporation) = @{ETCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnETC" class="survol">Etiquette (corporation)<button class="cacher"  name="roll_Init" id="btnETC" type="roll" value="&{template:default} {{name=@{Nom} : Jet d'Etiquette (corporation)}} {{Result=Etiquette (corporation) = @{ETCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ETCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ETCBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2276,7 +2276,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnBAR" class="survol">Baratin<button class="cacher"  name="roll_Init" id="btnBAR" type="roll" value="&{template:default} {{name=Jet de Baratin}} {{Result=Baratin = @{BARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnBAR" class="survol">Baratin<button class="cacher"  name="roll_Init" id="btnBAR" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Baratin}} {{Result=Baratin = @{BARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Perso.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BARValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_BARBase" /><input class="desactive" style=width:50px type="text" name="attr_BasePersonnalite" /></td>
@@ -2292,7 +2292,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BAR8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDGI" class="survol">Déguisement<button class="cacher"  name="roll_Init" id="btnDGI" type="roll" value="&{template:default} {{name=Jet de Déguisement}} {{Result=Déguisement = @{DGIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDGI" class="survol">Déguisement<button class="cacher"  name="roll_Init" id="btnDGI" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Déguisement}} {{Result=Déguisement = @{DGIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(Int+Pers)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DGIValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_DGIBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntPer" /></td>
@@ -2319,7 +2319,7 @@
                         <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCOC" class="survol">Crochetage<button class="cacher"  name="roll_Init" id="btnCOC" type="roll" value="&{template:default} {{name=Jet de Crochetage}} {{Result=Crochetage = @{COCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCOC" class="survol">Crochetage<button class="cacher"  name="roll_Init" id="btnCOC" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Crochetage}} {{Result=Crochetage = @{COCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_COCValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_COCBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseIntelligence" /></td>
@@ -2335,7 +2335,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COC8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnESA" class="survol">Escamotage<button class="cacher"  name="roll_Init" id="btnESA" type="roll" value="&{template:default} {{name=Jet de Escamotage}} {{Result=Escamotage = @{ESAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnESA" class="survol">Escamotage<button class="cacher"  name="roll_Init" id="btnESA" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Escamotage}} {{Result=Escamotage = @{ESAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Coord.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ESAValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_ESABase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordination" /></td>
@@ -2351,7 +2351,7 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ESA8" value="1"  /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnVAT" class="survol">Vol à la tire<button class="cacher"  name="roll_Init" id="btnVAT" type="roll" value="&{template:default} {{name=Jet de Vol à la tire}} {{Result=Vol à la tire = @{VATValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnVAT" class="survol">Vol à la tire<button class="cacher"  name="roll_Init" id="btnVAT" type="roll" value="&{template:default} {{name=@{Nom} : Jet de Vol à la tire}} {{Result=Vol à la tire = @{VATValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>(Coord+Per)/2</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_VATValeur" /></td>
             			<td><input style=width:50px type="hidden" name="attr_VATBase" /><input class="desactive" style=width:50px type="text" name="attr_BaseCoordPer" /></td>
@@ -2369,7 +2369,10 @@
                 </tbody>
             </table>
         </div>
-        
+        <div class="sheet-section-stress sheet-section ">
+            <div class="sheet-header ">Notes</div>
+            <textarea style="min-height:150px;width=95%;" name="attr_CompsNotes" placeholder="Saisez vos notes"></textarea>
+        </div>
     </div> 
     <div  class="sorts sheet-section-basic sheet-section">
         <div class="sheet-section-skills sheet-section ">
@@ -2444,25 +2447,25 @@
                         <td style="font-weight:bold;font-size:16px;">Cinétique</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnBOU" class="survol">Bouclier<button class="cacher"  name="roll_Init" id="btnBOU" type="roll" value="&{template:default} {{name=Sort de Bouclier}} {{Result=Bouclier = @{BOUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnBOU" class="survol">Bouclier<button class="cacher"  name="roll_Init" id="btnBOU" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Bouclier}} {{Result=Bouclier = @{BOUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BOUValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BOUBase" /></td>
             			<td><input style=width:50px type="number" name="attr_BOUMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_BOUNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU6" value="1" /></td>
@@ -2470,15 +2473,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOU8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPAR" class="survol">Explosion<button class="cacher"  name="roll_Init" id="btnPAR" type="roll" value="&{template:default} {{name=Sort d'Explosion}} {{Result=Explosion = @{PARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPAR" class="survol">Explosion<button class="cacher"  name="roll_Init" id="btnPAR" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Explosion}} {{Result=Explosion = @{PARValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXPValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXPBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXPMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXPNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP6" value="1" /></td>
@@ -2486,15 +2489,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXP8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnFAN" class="survol">Fantasme<button class="cacher"  name="roll_Init" id="btnFAN" type="roll" value="&{template:default} {{name=Sort de Fantasme}} {{Result=Fantasme = @{FANValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnFAN" class="survol">Fantasme<button class="cacher"  name="roll_Init" id="btnFAN" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Fantasme}} {{Result=Fantasme = @{FANValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_FANValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_FANBase" /></td>
             			<td><input style=width:50px type="number" name="attr_FANMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_FANNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN6" value="1" /></td>
@@ -2502,15 +2505,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_FAN8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnLEV" class="survol">Lévitation<button class="cacher"  name="roll_Init" id="btnLEV" type="roll" value="&{template:default} {{name=Sort de Lévitation}} {{Result=Lévitation = @{LEVValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnLEV" class="survol">Lévitation<button class="cacher"  name="roll_Init" id="btnLEV" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Lévitation}} {{Result=Lévitation = @{LEVValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_LEVValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_LEVBase" /></td>
             			<td><input style=width:50px type="number" name="attr_LEVMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_LEVNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV6" value="1" /></td>
@@ -2518,15 +2521,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_LEV8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnTEL" class="survol">Téléportation<button class="cacher"  name="roll_Init" id="btnTEL" type="roll" value="&{template:default} {{name=Sort de Téléportation}} {{Result=Téléportation = @{TELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTEL" class="survol">Téléportation<button class="cacher"  name="roll_Init" id="btnTEL" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Téléportation}} {{Result=Téléportation = @{TELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TELValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TELBase" /></td>
             			<td><input style=width:50px type="number" name="attr_TELMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_TELNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TEL6" value="1" /></td>
@@ -2537,25 +2540,25 @@
                         <td style="font-weight:bold;font-size:16px;">Eléments</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnBOE" class="survol">Boule Elémentaire<button class="cacher"  name="roll_Init" id="btnBOE" type="roll" value="&{template:default} {{name=Sort de Boule Elémentaire}} {{Result=Boule Elémentaire = @{BOEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnBOE" class="survol">Boule Elémentaire<button class="cacher"  name="roll_Init" id="btnBOE" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Boule Elémentaire}} {{Result=Boule Elémentaire = @{BOEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BOEValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_BOEBase" /></td>
             			<td><input style=width:50px type="number" name="attr_BOEMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_BOENotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE6" value="1" /></td>
@@ -2563,15 +2566,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_BOE8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEEL" class="survol">Eclair Elémentaire<button class="cacher"  name="roll_Init" id="btnEEL" type="roll" value="&{template:default} {{name=Sort de Eclair Elémentaire}} {{Result=Eclair Elémentaire = @{EELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEEL" class="survol">Eclair Elémentaire<button class="cacher"  name="roll_Init" id="btnEEL" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Eclair Elémentaire}} {{Result=Eclair Elémentaire = @{EELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EELValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EELBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EELMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EELNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL6" value="1" /></td>
@@ -2579,15 +2582,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EEL8" value="1" /></td>
                     </tr>.
                     <tr>
-                        <td ><label for="btnMEL" class="survol">Muraille Elémentaire<button class="cacher"  name="roll_Init" id="btnMEL" type="roll" value="&{template:default} {{name=Sort de Muraille Elémentaire}} {{Result=Muraille Elémentaire = @{MELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMEL" class="survol">Muraille Elémentaire<button class="cacher"  name="roll_Init" id="btnMEL" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Muraille Elémentaire}} {{Result=Muraille Elémentaire = @{MELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MELValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MELBase" /></td>
             			<td><input style=width:50px type="number" name="attr_MELMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_MELNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL6" value="1" /></td>
@@ -2595,15 +2598,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MEL8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnREL" class="survol">Résistance aux éléments<button class="cacher"  name="roll_Init" id="btnREL" type="roll" value="&{template:default} {{name=Sort de Résistance aux éléments}} {{Result=Résistance aux éléments = @{RELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnREL" class="survol">Résistance aux éléments<button class="cacher"  name="roll_Init" id="btnREL" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Résistance aux éléments}} {{Result=Résistance aux éléments = @{RELValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_RELValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_RELBase" /></td>
             			<td><input style=width:50px type="number" name="attr_RELMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_RELNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REL6" value="1" /></td>
@@ -2614,25 +2617,25 @@
                         <td style="font-weight:bold;font-size:16px;">Exorcisme</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXIO" class="survol">Exorcisme de l'influence obscure<button class="cacher"  name="roll_Init" id="btnEXIO" type="roll" value="&{template:default} {{name=Sort d'Exorcisme de l'influence obscure}} {{Result=Exorcisme de l'influence obscure = @{EXIOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXIO" class="survol">Exorcisme de l'influence obscure<button class="cacher"  name="roll_Init" id="btnEXIO" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme de l'influence obscure}} {{Result=Exorcisme de l'influence obscure = @{EXIOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXIOValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXIOBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXIOMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXIONotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO6" value="1" /></td>
@@ -2640,15 +2643,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXIO8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXM" class="survol">Exorcisme de la maladie<button class="cacher"  name="roll_Init" id="btnEXM" type="roll" value="&{template:default} {{name=Sort d'Exorcisme de la maladie}} {{Result=Exorcisme de la maladie = @{EXMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXM" class="survol">Exorcisme de la maladie<button class="cacher"  name="roll_Init" id="btnEXM" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme de la maladie}} {{Result=Exorcisme de la maladie = @{EXMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXMValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXMBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXMMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXMNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM6" value="1" /></td>
@@ -2656,15 +2659,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXM8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXMP" class="survol">Exorcisme des Mauvaises Pensées<button class="cacher"  name="roll_Init" id="btnEXMP" type="roll" value="&{template:default} {{name=Sort d'Exorcisme des Mauvaises Pensées}} {{Result=Exorcisme des Mauvaises Pensées = @{EXMPValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXMP" class="survol">Exorcisme des Mauvaises Pensées<button class="cacher"  name="roll_Init" id="btnEXMP" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme des Mauvaises Pensées}} {{Result=Exorcisme des Mauvaises Pensées = @{EXMPValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXMPValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXMPBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXMPMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXMPNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP6" value="1" /></td>
@@ -2672,15 +2675,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXMP8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXI" class="survol">Exorcisme des Infections<button class="cacher"  name="roll_Init" id="btnEXI" type="roll" value="&{template:default} {{name=Sort d'Exorcisme des Infections}} {{Result=Exorcisme des Infections = @{EXIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXI" class="survol">Exorcisme des Infections<button class="cacher"  name="roll_Init" id="btnEXI" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme des Infections}} {{Result=Exorcisme des Infections = @{EXIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXIValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXIBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXIMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXINotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI6" value="1" /></td>
@@ -2688,15 +2691,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXI8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXPO" class="survol">Exorcisme du Poison<button class="cacher"  name="roll_Init" id="btnEXPO" type="roll" value="&{template:default} {{name=Sort d'Exorcisme du Poison}} {{Result=Exorcisme du Poison = @{EXPOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXPO" class="survol">Exorcisme du Poison<button class="cacher"  name="roll_Init" id="btnEXPO" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme du Poison}} {{Result=Exorcisme du Poison = @{EXPOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXPOValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXPOBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXPOMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXPONotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO6" value="1" /></td>
@@ -2704,15 +2707,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXPO8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXB" class="survol">Exorcisme des Blessures<button class="cacher"  name="roll_Init" id="btnEXB" type="roll" value="&{template:default} {{name=Sort d'Exorcisme des Blessures}} {{Result=Exorcisme des Blessures = @{EXBValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXB" class="survol">Exorcisme des Blessures<button class="cacher"  name="roll_Init" id="btnEXB" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme des Blessures}} {{Result=Exorcisme des Blessures = @{EXBValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXBValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXBBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXBMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXBNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXB6" value="1" /></td>
@@ -2723,25 +2726,25 @@
                         <td style="font-weight:bold;font-size:16px;">Domination</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnCOM2" class="survol">Commandement<button class="cacher"  name="roll_Init" id="btnCOM2" type="roll" value="&{template:default} {{name=Sort de Commandement}} {{Result=Commandement = @{COMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnCOM2" class="survol">Commandement<button class="cacher"  name="roll_Init" id="btnCOM2" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Commandement}} {{Result=Commandement = @{COMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_COMAValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_COMABase" /></td>
             			<td><input style=width:50px type="number" name="attr_COMAMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_COMANotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA6" value="1" /></td>
@@ -2749,15 +2752,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_COMA8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDOMI" class="survol">Domination<button class="cacher"  name="roll_Init" id="btnDOMI" type="roll" value="&{template:default} {{name=Sort de Domination}} {{Result=Domination = @{DOMIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDOMI" class="survol">Domination<button class="cacher"  name="roll_Init" id="btnDOMI" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Domination}} {{Result=Domination = @{DOMIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DOMIValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DOMIBase" /></td>
             			<td><input style=width:50px type="number" name="attr_DOMIMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_DOMINotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI6" value="1" /></td>
@@ -2765,15 +2768,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMI8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnECRA" class="survol">Ecran<button class="cacher"  name="roll_Init" id="btnECRA" type="roll" value="&{template:default} {{name=Sort d'Ecran}} {{Result=Ecran = @{ECRAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnECRA" class="survol">Ecran<button class="cacher"  name="roll_Init" id="btnECRA" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Ecran}} {{Result=Ecran = @{ECRAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ECRAValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ECRABase" /></td>
             			<td><input style=width:50px type="number" name="attr_ECRAMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_ECRANotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA6" value="1" /></td>
@@ -2781,15 +2784,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ECRA8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEMPA" class="survol">Empathie<button class="cacher"  name="roll_Init" id="btnEMPA" type="roll" value="&{template:default} {{name=Sort d'Empathie}} {{Result=Empathie = @{EMPAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEMPA" class="survol">Empathie<button class="cacher"  name="roll_Init" id="btnEMPA" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Empathie}} {{Result=Empathie = @{EMPAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EMPAValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EMPABase" /></td>
             			<td><input style=width:50px type="number" name="attr_EMPAMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EMPANotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA6" value="1" /></td>
@@ -2797,15 +2800,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EMPA8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnEXOR" class="survol">Exorcisme<button class="cacher"  name="roll_Init" id="btnEXOR" type="roll" value="&{template:default} {{name=Sort d'Exorcisme}} {{Result=Exorcisme = @{EXORValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnEXOR" class="survol">Exorcisme<button class="cacher"  name="roll_Init" id="btnEXOR" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Exorcisme}} {{Result=Exorcisme = @{EXORValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXORValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_EXORBase" /></td>
             			<td><input style=width:50px type="number" name="attr_EXORMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_EXORNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR6" value="1" /></td>
@@ -2813,15 +2816,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_EXOR8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnHYPN" class="survol">Hypnose<button class="cacher"  name="roll_Init" id="btnHYPN" type="roll" value="&{template:default} {{name=Sort d'Hypnose}} {{Result=Hypnose = @{HYPNValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnHYPN" class="survol">Hypnose<button class="cacher"  name="roll_Init" id="btnHYPN" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Hypnose}} {{Result=Hypnose = @{HYPNValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_HYPNValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_HYPNBase" /></td>
             			<td><input style=width:50px type="number" name="attr_HYPNMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_HYPNNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPN6" value="1" /></td>
@@ -2832,25 +2835,25 @@
                         <td style="font-weight:bold;font-size:16px;">Manipulation</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDISC" class="survol">Discernement<button class="cacher"  name="roll_Init" id="btnDISC" type="roll" value="&{template:default} {{name=Sort de Discernement}} {{Result=Discernement = @{DISCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDISC" class="survol">Discernement<button class="cacher"  name="roll_Init" id="btnDISC" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Discernement}} {{Result=Discernement = @{DISCValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DISCValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DISCBase" /></td>
             			<td><input style=width:50px type="number" name="attr_DISCMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_DISCNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC6" value="1" /></td>
@@ -2858,15 +2861,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DISC8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDOMN" class="survol">Domination<button class="cacher"  name="roll_Init" id="DOMNPAR" type="roll" value="&{template:default} {{name=Sort de Domination}} {{Result=Domination = @{DOMNValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDOMN" class="survol">Domination<button class="cacher"  name="roll_Init" id="DOMNPAR" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Domination}} {{Result=Domination = @{DOMNValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DOMNValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DOMNBase" /></td>
             			<td><input style=width:50px type="number" name="attr_DOMNMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_DOMNNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN6" value="1" /></td>
@@ -2874,15 +2877,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DOMN8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnHYPO" class="survol">Hypnose<button class="cacher"  name="roll_Init" id="btnHYPO" type="roll" value="&{template:default} {{name=Sort d'Hypnose}} {{Result=Hypnose = @{HYPOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnHYPO" class="survol">Hypnose<button class="cacher"  name="roll_Init" id="btnHYPO" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Hypnose}} {{Result=Hypnose = @{HYPOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_HYPOValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_HYPOBase" /></td>
             			<td><input style=width:50px type="number" name="attr_HYPOMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_HYPONotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO6" value="1" /></td>
@@ -2890,15 +2893,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HYPO8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnSUGG" class="survol">Suggestion<button class="cacher"  name="roll_Init" id="btnSUGG" type="roll" value="&{template:default} {{name=Sort de Suggestion}} {{Result=Suggestion = @{SUGGValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnSUGG" class="survol">Suggestion<button class="cacher"  name="roll_Init" id="btnSUGG" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Suggestion}} {{Result=Suggestion = @{SUGGValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SUGGValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_SUGGBase" /></td>
             			<td><input style=width:50px type="number" name="attr_SUGGMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_SUGGNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG6" value="1" /></td>
@@ -2906,15 +2909,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_SUGG8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnMESS" class="survol">Message<button class="cacher"  name="roll_Init" id="btnMESS" type="roll" value="&{template:default} {{name=Sort de Message}} {{Result=Message = @{MESSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnMESS" class="survol">Message<button class="cacher"  name="roll_Init" id="btnMESS" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Message}} {{Result=Message = @{MESSValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MESSValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_MESSBase" /></td>
             			<td><input style=width:50px type="number" name="attr_MESSMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_MESSNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS6" value="1" /></td>
@@ -2922,15 +2925,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_MESS8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnTELA" class="survol">Télépathie<button class="cacher"  name="roll_Init" id="btnTELA" type="roll" value="&{template:default} {{name=Sort de Télépathie}} {{Result=Télépathie = @{TELAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTELA" class="survol">Télépathie<button class="cacher"  name="roll_Init" id="btnTELA" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Télépathie}} {{Result=Télépathie = @{TELAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TELAValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TELABase" /></td>
             			<td><input style=width:50px type="number" name="attr_TELAMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_TELANotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELA6" value="1" /></td>
@@ -2941,25 +2944,25 @@
                         <td style="font-weight:bold;font-size:16px;">Mentalisme</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnAEXO" class="survol">Auto-Exorcisme<button class="cacher"  name="roll_Init" id="btnAEXO" type="roll" value="&{template:default} {{name=Sort d'Auto-Exorcisme}} {{Result=Auto-Exorcisme = @{AEXOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnAEXO" class="survol">Auto-Exorcisme<button class="cacher"  name="roll_Init" id="btnAEXO" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Auto-Exorcisme}} {{Result=Auto-Exorcisme = @{AEXOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AEXOValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_AEXOBase" /></td>
             			<td><input style=width:50px type="number" name="attr_AEXOMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_AEXONotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO6" value="1" /></td>
@@ -2967,15 +2970,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_AEXO8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnENVO" class="survol">Envol<button class="cacher"  name="roll_Init" id="btnENVO" type="roll" value="&{template:default} {{name=Sort d'Envol}} {{Result=Envol = @{ENVOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnENVO" class="survol">Envol<button class="cacher"  name="roll_Init" id="btnENVO" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Envol}} {{Result=Envol = @{ENVOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ENVOValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ENVOBase" /></td>
             			<td><input style=width:50px type="number" name="attr_ENVOMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_ENVONotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO6" value="1" /></td>
@@ -2983,15 +2986,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ENVO8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnDEVO" class="survol">Développement<button class="cacher"  name="roll_Init" id="btnDEVO" type="roll" value="&{template:default} {{name=Sort de Développement}} {{Result=Développement = @{DEVOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnDEVO" class="survol">Développement<button class="cacher"  name="roll_Init" id="btnDEVO" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Développement}} {{Result=Développement = @{DEVOValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DEVOValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_DEVOBase" /></td>
             			<td><input style=width:50px type="number" name="attr_DEVOMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_DEVONotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO6" value="1" /></td>
@@ -2999,15 +3002,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_DEVO8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnINVU" class="survol">Invulnérabilité<button class="cacher"  name="roll_Init" id="btnINVU" type="roll" value="&{template:default} {{name=Sort d'Invulnérabilité}} {{Result=Invulnérabilité = @{INVUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnINVU" class="survol">Invulnérabilité<button class="cacher"  name="roll_Init" id="btnINVU" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Invulnérabilité}} {{Result=Invulnérabilité = @{INVUValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_INVUValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_INVUBase" /></td>
             			<td><input style=width:50px type="number" name="attr_INVUMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_INVUNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU6" value="1" /></td>
@@ -3015,31 +3018,31 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_INVU8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnHABI" class="survol">Habileté<button class="cacher"  name="roll_Init" id="btnHABI" type="roll" value="&{template:default} {{name=Sort d'Habileté}} {{Result=Habileté = @{HABIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnHABI" class="survol">Habileté<button class="cacher"  name="roll_Init" id="btnHABI" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Habileté}} {{Result=Habileté = @{HABIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_HABIValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_HABIBase" /></td>
             			<td><input style=width:50px type="number" name="attr_HABIMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_HABINotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI3" value="2" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABIJ4" value="1" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI3" value="1" /></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI6" value="1" /></td>
                 		<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI7" value="1" /></td>
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_HABI8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnVITE" class="survol">Vitesse<button class="cacher"  name="roll_Init" id="btnVITE" type="roll" value="&{template:default} {{name=Sort de Vitesse}} {{Result=Vitesse = @{VITEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnVITE" class="survol">Vitesse<button class="cacher"  name="roll_Init" id="btnVITE" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Vitesse}} {{Result=Vitesse = @{VITEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_VITEValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_VITEBase" /></td>
             			<td><input style=width:50px type="number" name="attr_VITEMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_VITENotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_VITE6" value="1" /></td>
@@ -3050,25 +3053,25 @@
                         <td style="font-weight:bold;font-size:16px;">Prémonition</td>
                         <td style="font-size:12px;" >(Niv. de perfection  : <input type=text style="height:18px; width:25px;float:none;"/>)</td>
                         <td colspan="4">&nbsp;</td>
-                        <td>+3</td>
+                        <td>+2</td>
+                        <td>+4</td>
                         <td>+5</td>
+                        <td>+6</td>
                         <td>+7</td>
                         <td>+8</td>
                         <td>+9</td>
                         <td>+10</td>
-                        <td>+11</td>
-                        <td>+12</td>
                     </tr>
                     <tr>
-                        <td ><label for="btnETUD" class="survol">Etude<button class="cacher"  name="roll_Init" id="btnETUD" type="roll" value="&{template:default} {{name=Sort d'Etude}} {{Result=Etude = @{ETUDValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnETUD" class="survol">Etude<button class="cacher"  name="roll_Init" id="btnETUD" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Etude}} {{Result=Etude = @{ETUDValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ETUDValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ETUDBase" /></td>
             			<td><input style=width:50px type="number" name="attr_ETUDMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_ETUDNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD6" value="1" /></td>
@@ -3076,15 +3079,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ETUD8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnORIE" class="survol">Orientation<button class="cacher"  name="roll_Init" id="btnORIE" type="roll" value="&{template:default} {{name=Sort d'Orientation}} {{Result=Orientation = @{ORIEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnORIE" class="survol">Orientation<button class="cacher"  name="roll_Init" id="btnORIE" type="roll" value="&{template:default} {{name=@{Nom} : Sort d'Orientation}} {{Result=Orientation = @{ORIEValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ORIEValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_ORIEBase" /></td>
             			<td><input style=width:50px type="number" name="attr_ORIEMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_ORIENotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE6" value="1" /></td>
@@ -3092,15 +3095,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_ORIE8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPREM" class="survol">Prémonition<button class="cacher"  name="roll_Init" id="btnPREM" type="roll" value="&{template:default} {{name=Sort de Prémonition}} {{Result=Prémonition = @{PREMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPREM" class="survol">Prémonition<button class="cacher"  name="roll_Init" id="btnPREM" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Prémonition}} {{Result=Prémonition = @{PREMValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PREMValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PREMBase" /></td>
             			<td><input style=width:50px type="number" name="attr_PREMMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_PREMNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREM6" value="1" /></td>
@@ -3108,15 +3111,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PREMJ8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnPRES" class="survol">Présence<button class="cacher"  name="roll_Init" id="btnPRES" type="roll" value="&{template:default} {{name=Sort de Présence}} {{Result=Présence = @{PRESValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnPRES" class="survol">Présence<button class="cacher"  name="roll_Init" id="btnPRES" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Présence}} {{Result=Présence = @{PRESValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PRESValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_PRESBase" /></td>
             			<td><input style=width:50px type="number" name="attr_PRESMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_PRESNotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES6" value="1" /></td>
@@ -3124,15 +3127,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_PRES8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnREGA" class="survol">Regard<button class="cacher"  name="roll_Init" id="btnREGA" type="roll" value="&{template:default} {{name=Sort de Regard}} {{Result=Regard = @{REGAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnREGA" class="survol">Regard<button class="cacher"  name="roll_Init" id="btnREGA" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Regard}} {{Result=Regard = @{REGAValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_REGAValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_REGABase" /></td>
             			<td><input style=width:50px type="number" name="attr_REGAMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_REGANotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA6" value="1" /></td>
@@ -3140,15 +3143,15 @@
             			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_REGA8" value="1" /></td>
                     </tr>
                     <tr>
-                        <td ><label for="btnTELI2" class="survol">Télépathie<button class="cacher"  name="roll_Init" id="btnTELI2" type="roll" value="&{template:default} {{name=Sort de Télépathie}} {{Result=Télépathie = @{TELIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
+                        <td ><label for="btnTELI2" class="survol">Télépathie<button class="cacher"  name="roll_Init" id="btnTELI2" type="roll" value="&{template:default} {{name=@{Nom} : Sort de Télépathie}} {{Result=Télépathie = @{TELIValeur}\n Jet : [[d20cs1cf20]]  }}"></td>
             			<td>Intel.</td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TELIValeur" /></td>
             			<td><input class="desactive" style=width:50px type="text" name="attr_TELIBase" /></td>
             			<td><input style=width:50px type="number" name="attr_TELIMod"  value="0"/></td>
             			<td><input style=width:150px type="text" name="attr_TELINotes" /></td>
-                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI1" value="3"/></td>
+                        <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI1" value="2"/></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI2" value="2" /></td>
-            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI3" value="2" /></td>
+            			<td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI3" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI4" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI5" value="1" /></td>
                         <td><input class="sheet-check-off" style=width:15px type="checkbox" name="attr_TELI6" value="1" /></td>
